@@ -535,7 +535,7 @@ by a large amount by adding this additional predictor.
 We can also visualize the model's predictions overlaid on top of the data. This time the predictions
 will be a surface in 3-D space, instead of a line in 2-D space, as we have 2
 predictors instead of 1. 
-```{r 07-knn-mult-viz, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "K-NN regression model’s predictions represented as a surface in 3-D space overlaid on top of the data using three predictors."}
+```{r 07-knn-mult-viz, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "K-NN regression model’s predictions represented as a surface in 3-D space overlaid on top of the data using three predictors.", out.width="70%"}
 knitr::include_graphics("img/lm-regr_3d.png")
 #library(plotly)
 #

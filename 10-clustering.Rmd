@@ -390,8 +390,7 @@ p1 <- ggplot(assignments, aes(csat, loyalty)) +
   facet_wrap(~ k) +
   labs(x = 'Customer satisfaction', y = 'Loyalty', colour = 'Cluster') +
   theme(text = element_text(size=20), legend.position = "none") +
-  geom_point(data = clusters %>% mutate(csat = x2, loyalty = x1), aes(fill = cluster), colour = "black", size = 5, shape = 21, stroke = 2)
-
+  geom_point(data = clusters %>% mutate(csat = clusters[[4]], loyalty = clusters[[3]]), aes(fill = cluster), colour = "black", size = 5, shape = 21, stroke = 2)
 p1
 ```
 

@@ -65,7 +65,7 @@ individuals collected from the population. We can then compute a **sample estima
 characteristic of the sample&mdash;that estimates the population parameter. For example, suppose we randomly selected 100 undergraduate students across North America (the sample) and computed the proportion of those
 students who own an iPhone (the sample estimate). In that case, we might suspect that that proportion is a reasonable estimate of the proportion of students who own an iPhone in the entire population. 
 
-```{r 11-population-vs-sample, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Population versus sample", fig.retina = 2}
+```{r 11-population-vs-sample, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Population versus sample", fig.retina = 2, out.width="100%"}
 knitr::include_graphics("img/population_vs_sample.png")
 ```
 

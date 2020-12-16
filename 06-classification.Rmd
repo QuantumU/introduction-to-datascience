@@ -455,7 +455,7 @@ $m$ variables.  In other words, the distance formula becomes
 $$Distance = \sqrt{(u_{1} -v_{1})^2 + (u_{2} - v_{2})^2 + \dots + (u_{m} - v_{m})^2}$$
 
 
-```{r 05-more, echo = FALSE, fig.cap = "3D scatterplot of symmetry, concavity and perimeter", out.width="100%"}
+```{r 05-more, echo = FALSE, fig.cap = "3D scatterplot of symmetry, concavity and perimeter", out.width="70%"}
 knitr::include_graphics("img/classification_3d.png")
 #library(plotly)
 #cancer %>%
