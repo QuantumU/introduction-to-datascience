@@ -1,9 +1,6 @@
 --- 
 title: "Data Science: A First Introduction"
-author:
-- Tiffany-Anne Timbers
-- Trevor Campbell
-- Melissa Lee
+author: "Tiffany Timbers, Trevor Campbell and Melissa Lee"
 date: "`r Sys.Date()`"
 documentclass: krantz
 bibliography: [book.bib, packages.bib, references.bib]
@@ -28,6 +25,17 @@ options(
 lapply(c('xfun'), function(pkg) {
   if (system.file(package = pkg) == '') install.packages(pkg)
 })
+
+include_svg = function(path) {
+  if (knitr::is_latex_output()) {
+    output = xfun::with_ext(path, 'pdf')
+    # you can compare the timestamp of pdf against svg to avoid conversion if necessary
+    system2('rsvg-convert', c('-f', 'pdf', '-a', '-o', shQuote(c(output, path))))
+  } else {
+    output = path
+  }
+  knitr::include_graphics(output)
+}
 ```
 
 # Preface {-}
@@ -59,7 +67,6 @@ Package names are in bold text (e.g., **rmarkdown**), and inline code and filena
 A lot of people helped me when I was writing the book.
 
 ```{block2, type='flushright', html.tag='p'}
-The DSCI 100 teaching assistant team
-Matías Salibián-Barrera
+The DSCI 100 teaching assistant team and Matías Salibián-Barrera
 ```
 

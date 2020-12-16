@@ -28,5 +28,6 @@ bookdown::pdf_book:
   toc_appendix: true
   quote_footer: ["\\VA{", "}{}"]
   highlight_bw: true
+  always_allow_html: true
 bookdown::epub_book:
   stylesheet: css/style.css

@@ -455,24 +455,25 @@ $m$ variables.  In other words, the distance formula becomes
 $$Distance = \sqrt{(u_{1} -v_{1})^2 + (u_{2} - v_{2})^2 + \dots + (u_{m} - v_{m})^2}$$
 
 
-```{r 05-more, echo = FALSE, fig.cap = "3D scatterplot of symmetry, concavity and perimeter"}
-library(plotly)
-cancer %>%
-  plot_ly(
-    x = ~Perimeter,
-    y = ~Concavity,
-    z = ~Symmetry,
-    color = ~Class,
-    opacity = 0.4,
-    size = 150,
-    colors = c(cbPalette[1], cbPalette[2])
-  ) %>%
-  add_markers() %>%
-  layout(scene = list(
-    xaxis = list(title = "Perimeter"),
-    yaxis = list(title = "Concavity"),
-    zaxis = list(title = "Symmetry")
-  ))
+```{r 05-more, echo = FALSE, fig.cap = "3D scatterplot of symmetry, concavity and perimeter", out.width="100%"}
+knitr::include_graphics("img/classification_3d.png")
+#library(plotly)
+#cancer %>%
+#  plot_ly(
+#    x = ~Perimeter,
+#    y = ~Concavity,
+#    z = ~Symmetry,
+#    color = ~Class,
+#    opacity = 0.4,
+#    size = 150,
+#    colors = c(cbPalette[1], cbPalette[2])
+#  ) %>%
+#  add_markers() %>%
+#  layout(scene = list(
+#    xaxis = list(title = "Perimeter"),
+#    yaxis = list(title = "Concavity"),
+#    zaxis = list(title = "Symmetry")
+#  ))
 ```
 
 *Click and drag the plot above to rotate it, and scroll to zoom. Note that in

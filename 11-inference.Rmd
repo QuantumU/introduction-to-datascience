@@ -66,7 +66,7 @@ characteristic of the sample&mdash;that estimates the population parameter. For 
 students who own an iPhone (the sample estimate). In that case, we might suspect that that proportion is a reasonable estimate of the proportion of students who own an iPhone in the entire population. 
 
 ```{r 11-population-vs-sample, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Population versus sample", fig.retina = 2}
-knitr::include_graphics("img/population_vs_sample.svg")
+knitr::include_graphics("img/population_vs_sample.png")
 ```
 
 </center>

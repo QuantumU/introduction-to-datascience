@@ -52,7 +52,7 @@ The name Jupyter came from combining the names of the three programming language
 
 A notebook looks like this:
 
-```{r img-jupyter, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Jupyter Notebook", fig.retina = 2}
+```{r img-jupyter, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "Jupyter Notebook", fig.retina = 2, out.width="100%"}
 knitr::include_graphics("img/jupyter.png")
 ```
 
@@ -248,7 +248,7 @@ To create a scatter plot of these two variables using the `ggplot` function, we 
 4. add a `+` symbol at the end of the `ggplot` call to add a layer to the plot
 5. call the `geom_point` function to tell R that we want to represent the data points as dots/points to create a scatter plot.
 
-```{r mother-tongue-vs-most-at-home, fig.width=5.75, fig.height=5, warning=FALSE, fig.cap = "Scatter plot of number of Canadians reporting a language as their mother tongue vs the primary language at home"}
+```{r mother-tongue-vs-most-at-home, fig.width=5, fig.height=4, warning=FALSE, fig.cap = "Scatter plot of number of Canadians reporting a language as their mother tongue vs the primary language at home"}
 ggplot(can_lang, aes(x = most_at_home, y = mother_tongue)) +
   geom_point()
 ``` 
@@ -284,7 +284,7 @@ informative labels for the x and y axes. Again, since we are specifying words
 and `ylab`, we surround them with double quotes. There are many more layers we 
 can add to format the plot further, and we will explore these in later chapters.
 
-```{r mother-tongue-vs-most-at-home-labs, fig.width=5.75, fig.height=5, warning=FALSE, fig.cap = "Scatter plot of number of Canadians reporting a language as their mother tongue vs the primary language at home with x and y labels"}
+```{r mother-tongue-vs-most-at-home-labs, fig.width=5, fig.height=4, warning=FALSE, fig.cap = "Scatter plot of number of Canadians reporting a language as their mother tongue vs the primary language at home with x and y labels"}
 ggplot(can_lang, aes(x = most_at_home, y = mother_tongue)) +
   geom_point() +
   xlab("Language spoken most at home (number of Canadian residents)") +
@@ -293,7 +293,7 @@ ggplot(can_lang, aes(x = most_at_home, y = mother_tongue)) +
 
 Most of the data points from the 214 observations in this data set are bunched up in the lower left-handside of this visualization. This is because many many more people in Canada speak the two official languages (English and French). Thus to answer our question, we will need to adjust the scale of the x and y axes so that they are on a log scale. We can again add additional layers to the plot object using the `+` symbol to do this:
 
-```{r mother-tongue-vs-most-at-home-scale, fig.width=5.75, fig.height=5, warning=FALSE, fig.cap = "Scatter plot of number of Canadians reporting a language as their mother tongue vs the primary language at home with log adjusted x and y axes"}
+```{r mother-tongue-vs-most-at-home-scale, fig.width=5, fig.height=4, warning=FALSE, fig.cap = "Scatter plot of number of Canadians reporting a language as their mother tongue vs the primary language at home with log adjusted x and y axes"}
 ggplot(can_lang, aes(x = most_at_home, y = mother_tongue)) +
   geom_point() +
   xlab("Language spoken most at home (number of Canadian residents)") +
@@ -351,7 +351,7 @@ can_lang
 
 Finally, let's visualize the data now that we have represented it as proportions (and change our axis labels to reflect this change in units!):
 
-```{r mother-tongue-vs-most-at-home-scale-props, fig.width=5.75, fig.height=5, warning=FALSE, fig.cap = "Scatter plot of proportion of Canadians reporting a language as their mother tongue vs the primary language at home"}
+```{r mother-tongue-vs-most-at-home-scale-props, fig.width=5, fig.height=4, warning=FALSE, fig.cap = "Scatter plot of proportion of Canadians reporting a language as their mother tongue vs the primary language at home"}
 ggplot(can_lang, aes(x = most_at_home, y = mother_tongue)) +
   geom_point() +
   xlab("Language spoken most at home (proportion of Canadian residents)") +
